@@ -1,61 +1,110 @@
-2025-01-09T10:38:14.802-06:00  INFO 11004 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Starting CatalogoApplication using Java 17 with PID 11004 (C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo\catalogo\target\classes started by e-cbarron in C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo)
-2025-01-09T10:38:14.816-06:00  INFO 11004 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : No active profile set, falling back to 1 default profile: "default"
-2025-01-09T10:38:16.918-06:00  INFO 11004 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-09T10:38:17.038-06:00  INFO 11004 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
-2025-01-09T10:38:18.379-06:00  INFO 11004 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-01-09T10:38:18.404-06:00  INFO 11004 --- [catalogo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-09T10:38:18.405-06:00  INFO 11004 --- [catalogo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-01-09T10:38:18.533-06:00  INFO 11004 --- [catalogo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-09T10:38:18.534-06:00  INFO 11004 --- [catalogo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3630 ms
-2025-01-09T10:38:19.048-06:00  INFO 11004 --- [catalogo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-09T10:38:19.241-06:00  INFO 11004 --- [catalogo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-01-09T10:38:19.336-06:00  INFO 11004 --- [catalogo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-09T10:38:19.947-06:00  INFO 11004 --- [catalogo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-09T10:38:20.006-06:00  INFO 11004 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-09T10:38:21.703-06:00  INFO 11004 --- [catalogo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@6ba060af
-2025-01-09T10:38:21.707-06:00  INFO 11004 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-09T10:38:22.080-06:00  WARN 11004 --- [catalogo] [main] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-01-09T10:38:23.758-06:00  INFO 11004 --- [catalogo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-09T10:38:43.846-06:00  INFO 11004 --- [catalogo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-09T10:38:45.132-06:00  WARN 11004 --- [catalogo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-01-09T10:38:46.315-06:00  INFO 11004 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-01-09T10:38:46.338-06:00  INFO 11004 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Started CatalogoApplication in 32.353 seconds (process running for 34.268)
-2025-01-09T10:38:46.787-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-01-09T10:38:46.789-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-01-09T10:38:46.795-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2025-01-09T10:38:48.653-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1018 ms
-2025-01-09T10:48:07.872-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-9] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por año con paginación
-2025-01-09T10:48:08.247-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-9] c.D.c.controller.CatalogoControlador     : Se encontraron 4 páginas de películas en la base de datos
-2025-01-09T10:48:08.256-06:00  WARN 11004 --- [catalogo] [http-nio-8080-exec-9] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+2025-02-24T09:27:00.612-06:00  INFO 3484 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Starting CatalogoApplication using Java 17 with PID 3484 (C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo\catalogo\target\classes started by e-cbarron in C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo)
+2025-02-24T09:27:00.625-06:00  INFO 3484 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-24T09:27:03.365-06:00  INFO 3484 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-24T09:27:03.480-06:00  INFO 3484 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2025-02-24T09:27:05.140-06:00  INFO 3484 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-24T09:27:05.159-06:00  INFO 3484 --- [catalogo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-24T09:27:05.159-06:00  INFO 3484 --- [catalogo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-24T09:27:05.301-06:00  INFO 3484 --- [catalogo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-24T09:27:05.301-06:00  INFO 3484 --- [catalogo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4608 ms
+2025-02-24T09:27:06.142-06:00  INFO 3484 --- [catalogo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-24T09:27:06.277-06:00  INFO 3484 --- [catalogo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-02-24T09:27:06.338-06:00  INFO 3484 --- [catalogo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-24T09:27:06.872-06:00  INFO 3484 --- [catalogo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-24T09:27:06.916-06:00  INFO 3484 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-24T09:27:08.533-06:00  INFO 3484 --- [catalogo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7f64bd7
+2025-02-24T09:27:08.536-06:00  INFO 3484 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-24T09:27:08.832-06:00  WARN 3484 --- [catalogo] [main] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-24T09:27:10.419-06:00  INFO 3484 --- [catalogo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-24T09:27:35.318-06:00  INFO 3484 --- [catalogo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-24T09:27:36.550-06:00  WARN 3484 --- [catalogo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-24T09:27:36.615-06:00  WARN 3484 --- [catalogo] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-2025-01-09T10:48:39.808-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-2] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por año con paginación
-2025-01-09T10:48:39.838-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-2] c.D.c.controller.CatalogoControlador     : Se encontraron 4 páginas de películas en la base de datos
-2025-01-09T10:48:51.499-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-7] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por año con paginación
-2025-01-09T10:48:51.530-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-7] c.D.c.controller.CatalogoControlador     : Se encontraron 4 páginas de películas en la base de datos
-2025-01-09T10:48:59.552-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-3] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por año con paginación
-2025-01-09T10:48:59.567-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-3] c.D.c.controller.CatalogoControlador     : Se encontraron 4 páginas de películas en la base de datos
-2025-01-09T10:49:34.611-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-4] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:49:34.723-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-4] c.D.c.controller.CatalogoControlador     : Se encontraron 2 páginas de películas en la base de datos
-2025-01-09T10:49:54.114-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-5] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:49:54.152-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-5] c.D.c.controller.CatalogoControlador     : Se encontraron 2 páginas de películas en la base de datos
-2025-01-09T10:50:03.019-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-8] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:50:03.053-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-8] c.D.c.controller.CatalogoControlador     : Se encontraron 2 páginas de películas en la base de datos
-2025-01-09T10:50:12.427-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-1] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:50:12.472-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-1] c.D.c.controller.CatalogoControlador     : Se encontraron 2 páginas de películas en la base de datos
-2025-01-09T10:50:22.438-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-6] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:50:22.463-06:00  WARN 11004 --- [catalogo] [http-nio-8080-exec-6] c.D.c.controller.CatalogoControlador     : No se encontraron películas
-2025-01-09T10:50:39.163-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-10] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:50:39.195-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-10] c.D.c.controller.CatalogoControlador     : Se encontraron 2 páginas de películas en la base de datos
-2025-01-09T10:50:49.596-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-9] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:50:49.622-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-9] c.D.c.controller.CatalogoControlador     : Se encontraron 2 páginas de películas en la base de datos
-2025-01-09T10:50:58.215-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-2] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:50:58.236-06:00  WARN 11004 --- [catalogo] [http-nio-8080-exec-2] c.D.c.controller.CatalogoControlador     : No se encontraron películas
-2025-01-09T10:51:07.382-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-7] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:51:07.411-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-7] c.D.c.controller.CatalogoControlador     : Se encontraron 1 páginas de películas en la base de datos
-2025-01-09T10:51:14.962-06:00  INFO 11004 --- [catalogo] [http-nio-8080-exec-3] c.D.c.controller.CatalogoControlador     : Iniciando obtención de películas ordenadas por nombre con paginación
-2025-01-09T10:51:14.992-06:00  WARN 11004 --- [catalogo] [http-nio-8080-exec-3] c.D.c.controller.CatalogoControlador     : No se encontraron películas
-2025-01-09T10:52:44.696-06:00  INFO 11004 --- [catalogo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-09T10:52:44.700-06:00  INFO 11004 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-09T10:52:44.734-06:00  INFO 11004 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+Using generated security password: 22cf9162-7906-4d95-b2a9-fb291becfc67
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-24T09:27:36.635-06:00  INFO 3484 --- [catalogo] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-24T09:27:38.305-06:00  INFO 3484 --- [catalogo] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-02-24T09:27:39.234-06:00  INFO 3484 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-24T09:27:39.260-06:00  INFO 3484 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Started CatalogoApplication in 39.251 seconds (process running for 49.934)
+2025-02-24T09:27:40.572-06:00  INFO 3484 --- [catalogo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-24T09:27:40.573-06:00  INFO 3484 --- [catalogo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-24T09:27:40.575-06:00  INFO 3484 --- [catalogo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-24T09:27:41.621-06:00  INFO 3484 --- [catalogo] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 652 ms
+2025-02-24T09:31:33.770-06:00  INFO 3484 --- [catalogo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-24T09:31:33.776-06:00  INFO 3484 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-24T09:31:33.819-06:00  INFO 3484 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-24T09:31:50.214-06:00  INFO 3152 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Starting CatalogoApplication using Java 17 with PID 3152 (C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo\catalogo\target\classes started by e-cbarron in C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo)
+2025-02-24T09:31:50.217-06:00  INFO 3152 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-24T09:31:52.612-06:00  INFO 3152 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-24T09:31:52.718-06:00  INFO 3152 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2025-02-24T09:31:54.511-06:00  INFO 3152 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-24T09:31:54.531-06:00  INFO 3152 --- [catalogo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-24T09:31:54.531-06:00  INFO 3152 --- [catalogo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-24T09:31:54.664-06:00  INFO 3152 --- [catalogo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-24T09:31:54.664-06:00  INFO 3152 --- [catalogo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4377 ms
+2025-02-24T09:31:55.420-06:00  INFO 3152 --- [catalogo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-24T09:31:55.525-06:00  INFO 3152 --- [catalogo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-02-24T09:31:55.595-06:00  INFO 3152 --- [catalogo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-24T09:31:56.022-06:00  INFO 3152 --- [catalogo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-24T09:31:56.066-06:00  INFO 3152 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-24T09:31:56.471-06:00  INFO 3152 --- [catalogo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7178d811
+2025-02-24T09:31:56.473-06:00  INFO 3152 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-24T09:31:56.710-06:00  WARN 3152 --- [catalogo] [main] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-24T09:31:58.120-06:00  INFO 3152 --- [catalogo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-24T09:31:59.198-06:00  INFO 3152 --- [catalogo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-24T09:32:00.094-06:00  WARN 3152 --- [catalogo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-24T09:32:00.149-06:00  WARN 3152 --- [catalogo] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: de7f0bec-e0be-4275-8860-d3eba41afdc5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-24T09:32:00.159-06:00  INFO 3152 --- [catalogo] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-24T09:32:00.883-06:00  INFO 3152 --- [catalogo] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-02-24T09:32:01.723-06:00  INFO 3152 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-24T09:32:01.747-06:00  INFO 3152 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Started CatalogoApplication in 12.108 seconds (process running for 14.258)
+2025-02-24T09:32:02.432-06:00  INFO 3152 --- [catalogo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-24T09:32:02.432-06:00  INFO 3152 --- [catalogo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-24T09:32:02.434-06:00  INFO 3152 --- [catalogo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-24T09:32:03.573-06:00  INFO 3152 --- [catalogo] [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 691 ms
+2025-02-24T09:33:44.946-06:00  INFO 3152 --- [catalogo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-24T09:33:44.950-06:00  INFO 3152 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-24T09:33:44.984-06:00  INFO 3152 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-24T10:43:12.857-06:00  INFO 23432 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Starting CatalogoApplication using Java 17 with PID 23432 (C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo\catalogo\target\classes started by e-cbarron in C:\Users\e-cbarron\OneDrive - NEORIS\Documents\Java 17 Programas\catalogo)
+2025-02-24T10:43:12.861-06:00  INFO 23432 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-02-24T10:43:15.465-06:00  INFO 23432 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-24T10:43:15.579-06:00  INFO 23432 --- [catalogo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 2 JPA repository interfaces.
+2025-02-24T10:43:17.514-06:00  INFO 23432 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-24T10:43:17.533-06:00  INFO 23432 --- [catalogo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-24T10:43:17.533-06:00  INFO 23432 --- [catalogo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-24T10:43:17.703-06:00  INFO 23432 --- [catalogo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-24T10:43:17.703-06:00  INFO 23432 --- [catalogo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4735 ms
+2025-02-24T10:43:18.655-06:00  INFO 23432 --- [catalogo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-24T10:43:18.818-06:00  INFO 23432 --- [catalogo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-02-24T10:43:18.903-06:00  INFO 23432 --- [catalogo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-24T10:43:19.406-06:00  INFO 23432 --- [catalogo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-24T10:43:19.463-06:00  INFO 23432 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-24T10:43:19.977-06:00  INFO 23432 --- [catalogo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@3d2b13b1
+2025-02-24T10:43:19.979-06:00  INFO 23432 --- [catalogo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-24T10:43:20.180-06:00  WARN 23432 --- [catalogo] [main] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-24T10:43:21.580-06:00  INFO 23432 --- [catalogo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-24T10:43:22.761-06:00  INFO 23432 --- [catalogo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-24T10:43:23.822-06:00  WARN 23432 --- [catalogo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-24T10:43:23.886-06:00  WARN 23432 --- [catalogo] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9777f2b4-118c-4160-957d-abf58932c957
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-24T10:43:23.903-06:00  INFO 23432 --- [catalogo] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-24T10:43:24.734-06:00  INFO 23432 --- [catalogo] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-02-24T10:43:25.996-06:00  INFO 23432 --- [catalogo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-24T10:43:26.031-06:00  INFO 23432 --- [catalogo] [main] com.Demo.catalogo.CatalogoApplication    : Started CatalogoApplication in 13.778 seconds (process running for 23.768)
+2025-02-24T10:51:20.047-06:00  INFO 23432 --- [catalogo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-24T10:51:20.047-06:00  INFO 23432 --- [catalogo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-24T10:51:20.049-06:00  INFO 23432 --- [catalogo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-24T10:51:21.022-06:00  INFO 23432 --- [catalogo] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 661 ms
+2025-02-24T17:36:35.537-06:00  INFO 23432 --- [catalogo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-24T17:36:35.542-06:00  INFO 23432 --- [catalogo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...

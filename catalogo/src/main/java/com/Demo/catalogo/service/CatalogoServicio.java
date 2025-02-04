@@ -6,6 +6,8 @@ import com.Demo.catalogo.model.Pelicula;
 import com.Demo.catalogo.model.Proveedor;
 import com.Demo.catalogo.repository.ICatalogoRepository;
 import com.Demo.catalogo.repository.IProveedorRepository;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Timer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -20,6 +22,9 @@ import java.util.stream.Collectors;
 public class CatalogoServicio implements ICatalogoServicio {
 
     private final ICatalogoRepository catalogoRepositorio;
+
+    @Autowired
+    private MeterRegistry meterRegistry;
 
     @Autowired
     private IProveedorRepository proveedorRepositorio;  // Inyección del repositorio de Proveedor
@@ -116,12 +121,22 @@ public class CatalogoServicio implements ICatalogoServicio {
     public Page<PeliculaDTO> obtenerTodasLasPeliculas(int pagina, int tamanoPagina) {
         // Crear el objeto Pageable para la paginación y ordenar por año (de más reciente a más antigua)
         Pageable pageable = PageRequest.of(pagina, tamanoPagina, Sort.by(Sort.Order.desc("anio")));
-        // Obtener las películas de la base de datos con paginación
-        Page<Pelicula> peliculasPage = catalogoRepositorio.findAll(pageable);
-        // Convertir la página de entidades Pelicula a una página de DTOs
-        Page<PeliculaDTO> peliculasDTOPage = peliculasPage.map(PeliculaDTO::fromEntity);
-        return peliculasDTOPage;
+
+        // Crear el timer para medir el tiempo de ejecución
+        Timer timer = Timer.builder("catalogo.obtener_todas_las_peliculas")
+                .description("Tiempo de respuesta para obtener todas las películas")
+                .register(meterRegistry);  // Asegúrate de inyectar MeterRegistry
+
+        // Medir el tiempo de ejecución de la consulta
+        return timer.record(() -> {
+            // Obtener las películas de la base de datos con paginación
+            Page<Pelicula> peliculasPage = catalogoRepositorio.findAll(pageable);
+
+            // Convertir la página de entidades Pelicula a una página de DTOs
+            return peliculasPage.map(PeliculaDTO::fromEntity);
+        });
     }
+
 
 
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Catálogo de Películas - Enviado por ' + ${nombreEmpresa}"></title>
+</head>
+<body>
+<h1 th:text="'¡Hola, ' + ${nombreDestinatario} + '!'"></h1>
+
+<p>
+    Este es un correo automático que contiene el catálogo de películas actualizado.
+    La fecha de envío es: <strong th:text="${fechaActual}"></strong>.
+</p>
+
+<p>A continuación, te compartimos el listado de películas que hemos actualizado en nuestro sistema:</p>
+
+<!-- Aquí más adelante agregarás el contenido del catálogo en formato tabla o el archivo Excel -->
+
+<p>Te agradeceríamos que le des un vistazo y nos hagas saber cualquier duda o sugerencia.</p>
+
+<p>Gracias por tu atención,</p>
+<p>El equipo de <strong th:text="${nombreEmpresa}"></strong></p>
+</body>
+</html>
+
+

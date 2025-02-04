@@ -7,6 +7,7 @@ import com.Demo.catalogo.service.ICatalogoServicio;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -23,6 +25,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @Validated
+@SecurityRequirement(name = "bearerAuth")
 public class CatalogoControlador {
 
     private static final Logger logger = LoggerFactory.getLogger(CatalogoControlador.class);
@@ -35,9 +38,11 @@ public class CatalogoControlador {
     }
 
     @PutMapping("/peliculas/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_UPDATER')")
     @Operation(
             summary = "Actualizar una película",
             description = "Actualiza los datos de una película existente identificada por su ID.",
+            security = @SecurityRequirement(name = "bearerAuth"),
             responses = {
                     @ApiResponse(responseCode = "200", description = "Película actualizada con éxito"),
                     @ApiResponse(responseCode = "404", description = "Película no encontrada"),
@@ -70,9 +75,11 @@ public class CatalogoControlador {
     }
 
     @DeleteMapping("/peliculas/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_EDITOR')")
     @Operation(
             summary = "Eliminar una película",
             description = "Elimina una película existente identificada por su ID.",
+            security = @SecurityRequirement(name = "bearerAuth"),
             responses = {
                     @ApiResponse(responseCode = "200", description = "Película eliminada con éxito"),
                     @ApiResponse(responseCode = "404", description = "Película no encontrada"),
@@ -98,9 +105,11 @@ public class CatalogoControlador {
     }
 
     @PostMapping("/peliculas")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_EDITOR')")
     @Operation(
             summary = "Crear una nueva película",
             description = "Crea un nuevo registro de película en el catálogo.",
+            security = @SecurityRequirement(name = "bearerAuth"),
             responses = {
                     @ApiResponse(responseCode = "201", description = "Película creada con éxito"),
                     @ApiResponse(responseCode = "409", description = "Película duplicada"),
@@ -126,9 +135,11 @@ public class CatalogoControlador {
     }
 
     @GetMapping("/peliculas/{proveedor}")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_VIEWER')")
     @Operation(
             summary = "Obtener todas las películas de un proveedor ordenadas por nombre",
             description = "Devuelve una lista de todas las películas de un proveedor en el catálogo ordenadas por nombre de la A a la Z.",
+            security = @SecurityRequirement(name = "bearerAuth"),
             responses = {
                     @ApiResponse(responseCode = "200", description = "Películas encontradas"),
                     @ApiResponse(responseCode = "404", description = "No se encontraron películas"),
@@ -165,9 +176,11 @@ public class CatalogoControlador {
 
 
     @GetMapping("/peliculas")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_VIEWER')")
     @Operation(
             summary = "Obtener todas las películas ordenadas por año",
             description = "Devuelve una lista de todas las películas en el catálogo ordenadas por año en orden descendente.",
+            security = @SecurityRequirement(name = "bearerAuth"),
             responses = {
                     @ApiResponse(responseCode = "200", description = "Películas encontradas"),
                     @ApiResponse(responseCode = "404", description = "No se encontraron películas"),
